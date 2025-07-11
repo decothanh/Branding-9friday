@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9friday - Brand Identity Guidelines</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 5%;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #bbb;
+        }
+        .logo-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .logo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .section-title {
+            background: linear-gradient(135deg, #1e3a8a, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">9friday</h1>
+                <p class="text-xl opacity-90 mb-8">Brand Identity Guidelines</p>
+                <div class="w-24 h-1 bg-white mx-auto rounded-full"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center space-x-8 py-4">
+                <a href="#overview" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Tổng Quan</a>
+                <a href="#logo-variants" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Biến Thể Logo</a>
+                <a href="#icons" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Icon 9f</a>
+                <a href="#applications" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Ứng Dụng</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold section-title mb-6">Thuyết Minh Logo</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Logo 9friday được thiết kế với triết lý nhấn mạnh số "9" như một biểu tượng mạnh mẽ cho sự tăng trưởng và đổi mới trong lĩnh vực công nghệ tài chính.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <img src="https://page1.genspark.site/v1/base64_upload/e89594c1fd16ef4f038ad6ba66910391" alt="Logo 9friday chính" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-palette text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Màu Sắc</h3>
+                            <p class="text-gray-600">Gradient xanh lam đến xanh lá thể hiện sự chuyên nghiệp, tin cậy và tăng trưởng bền vững.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-font text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Typography</h3>
+                            <p class="text-gray-600">Font chữ sans-serif hiện đại, tối ưu cho khả năng đọc và nhận diện thương hiệu.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bullseye text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Điểm Nhấn</h3>
+                            <p class="text-gray-600">Số "9" được thiết kế dominant, tạo hierarchy rõ ràng và dễ nhận diện.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Variants Section -->
+    <section id="logo-variants" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold section-title mb-6">Biến Thể Logo</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Bộ logo hoàn chỉnh với các biến thể phù hợp cho mọi nhu cầu ứng dụng từ digital đến print.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Logo Chính -->
+                <div class="logo-card bg-gray-50 p-8 rounded-2xl">
+                    <div class="bg-black rounded-lg p-6 mb-4">
+                        <img src="https://page1.genspark.site/v1/base64_upload/e89594c1fd16ef4f038ad6ba66910391" alt="Logo chính" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Logo Chính</h3>
+                    <p class="text-gray-600 mb-4">Gradient trên nền tối, sử dụng cho website, digital marketing</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Digital</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Web</span>
+                    </div>
+                </div>
+
+                <!-- Logo Âm Bản -->
+                <div class="logo-card bg-gray-50 p-8 rounded-2xl">
+                    <div class="bg-white rounded-lg p-6 mb-4 border">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/d36832bd-fd81-4db3-aedb-bc31c495fc9a" alt="Logo âm bản" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Logo Âm Bản</h3>
+                    <p class="text-gray-600 mb-4">Gradient trên nền trắng, phù hợp cho tài liệu in ấn</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Print</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Business</span>
+                    </div>
+                </div>
+
+                <!-- Logo Đơn Sắc Đen -->
+                <div class="logo-card bg-gray-50 p-8 rounded-2xl">
+                    <div class="bg-white rounded-lg p-6 mb-4 border">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/ce977c74-07d8-4018-a60a-07a2aa039cf8" alt="Logo đơn sắc đen" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Đơn Sắc Đen</h3>
+                    <p class="text-gray-600 mb-4">Một màu đen, dùng cho fax, copy, embossing</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Monochrome</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Emboss</span>
+                    </div>
+                </div>
+
+                <!-- Logo Đơn Sắc Xanh -->
+                <div class="logo-card bg-gray-50 p-8 rounded-2xl">
+                    <div class="bg-white rounded-lg p-6 mb-4 border">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/f8bece21-e23d-4442-9994-3e452ec3f706" alt="Logo đơn sắc xanh" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Đơn Sắc Xanh</h3>
+                    <p class="text-gray-600 mb-4">Một màu xanh, dùng cho branded materials</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Branded</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm">Uniform</span>
+                    </div>
+                </div>
+
+                <!-- Logo Layout Dọc -->
+                <div class="logo-card bg-gray-50 p-8 rounded-2xl">
+                    <div class="bg-black rounded-lg p-6 mb-4">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/80d0a70c-cd4e-42c9-ac7d-8b821656bbaa" alt="Logo layout dọc" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Layout Dọc</h3>
+                    <p class="text-gray-600 mb-4">Số 9 trên, friday dưới, cho banner dọc</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Banner</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Social</span>
+                    </div>
+                </div>
+
+                <!-- Logo Âm Bản Trắng -->
+                <div class="logo-card bg-gray-50 p-8 rounded-2xl">
+                    <div class="bg-black rounded-lg p-6 mb-4">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/7d1add6c-57ca-4b54-ad53-6b17582bfca9" alt="Logo âm bản trắng" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Âm Bản Trắng</h3>
+                    <p class="text-gray-600 mb-4">Trắng trên nền tối, cho video, presentation</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Video</span>
+                        <span class="px-3 py-1 bg-cyan-100 text-cyan-800 rounded-full text-sm">Presentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icons Section -->
+    <section id="icons" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold section-title mb-6">Icon 9f</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Phiên bản rút gọn "9f" hoàn hảo cho app icon, favicon và các không gian hạn chế.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Icon Chính -->
+                <div class="logo-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-gray-100 rounded-lg p-6 mb-4">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/30137f96-e49a-4193-b337-d9ee856bf537" alt="Icon 9f chính" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Icon Chính</h3>
+                    <p class="text-gray-600 mb-4">Nền tối, gradient, cho app icon chính</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">App Icon</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Favicon</span>
+                    </div>
+                </div>
+
+                <!-- Icon Nền Trắng -->
+                <div class="logo-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-gray-100 rounded-lg p-6 mb-4">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/fcb253a4-26ac-48ef-b88a-e4ff56ed63e9" alt="Icon 9f nền trắng" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Nền Trắng</h3>
+                    <p class="text-gray-600 mb-4">Light mode, business card, letterhead</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Light Mode</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Business</span>
+                    </div>
+                </div>
+
+                <!-- Icon Layout Dọc -->
+                <div class="logo-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-gray-100 rounded-lg p-6 mb-4">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/5279fccf-f0d0-4b0a-a447-85fc2e917e0e" alt="Icon 9f layout dọc" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Layout Dọc</h3>
+                    <p class="text-gray-600 mb-4">9 trên f, compact spaces, alternative</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Compact</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Alternative</span>
+                    </div>
+                </div>
+
+                <!-- Icon Đơn Sắc Đen -->
+                <div class="logo-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-gray-100 rounded-lg p-6 mb-4">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/e283e744-8f32-4b41-82c2-848e9489b23d" alt="Icon 9f đơn sắc đen" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Đơn Sắc Đen</h3>
+                    <p class="text-gray-600 mb-4">Print một màu, embossing, laser</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Print</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Laser</span>
+                    </div>
+                </div>
+
+                <!-- Icon Đơn Sắc Xanh -->
+                <div class="logo-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-gray-100 rounded-lg p-6 mb-4">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/f1ceb274-6e1b-46e0-9cd5-737278048665" alt="Icon 9f đơn sắc xanh" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Đơn Sắc Xanh</h3>
+                    <p class="text-gray-600 mb-4">Branded materials, uniform, merchandise</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Branded</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm">Merchandise</span>
+                    </div>
+                </div>
+
+                <!-- Icon App Style -->
+                <div class="logo-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-gray-100 rounded-lg p-6 mb-4">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_edited/bb595feb-237a-48ae-98eb-522941bac2e7" alt="Icon 9f app style" class="w-full cursor-pointer" onclick="openModal(this.src)">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">App Style</h3>
+                    <p class="text-gray-600 mb-4">Rounded corners, iOS/Android style</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">iOS</span>
+                        <span class="px-3 py-1 bg-cyan-100 text-cyan-800 rounded-full text-sm">Android</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold section-title mb-6">Ứng Dụng Thực Tế</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Hướng dẫn sử dụng logo trong các tình huống thực tế từ digital đến print.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Digital Applications -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-desktop text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Digital</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>Website Header</li>
+                        <li>Email Signature</li>
+                        <li>Social Media</li>
+                        <li>Digital Marketing</li>
+                    </ul>
+                </div>
+
+                <!-- Print Applications -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-print text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Print</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>Business Cards</li>
+                        <li>Letterhead</li>
+                        <li>Brochures</li>
+                        <li>Signage</li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Applications -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Mobile</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>App Icons</li>
+                        <li>Splash Screens</li>
+                        <li>Push Notifications</li>
+                        <li>Mobile Web</li>
+                    </ul>
+                </div>
+
+                <!-- Merchandise Applications -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tshirt text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Merchandise</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>T-shirts</li>
+                        <li>Mugs</li>
+                        <li>Bags</li>
+                        <li>Stickers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Guidelines -->
+            <div class="mt-16 bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-6 text-center">Quy Tắc Sử Dụng</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-green-600">
+                            <i class="fas fa-check-circle mr-2"></i>Nên Làm
+                        </h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Sử dụng logo gốc khi có thể</li>
+                            <li>• Đảm bảo kích thước tối thiểu 1 inch cho print</li>
+                            <li>• Sử dụng icon 9f cho không gian hạn chế</li>
+                            <li>• Giữ không gian trống xung quanh logo</li>
+                            <li>• Sử dụng file vector cho print chất lượng cao</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-red-600">
+                            <i class="fas fa-times-circle mr-2"></i>Không Nên Làm
+                        </h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Thay đổi tỷ lệ logo</li>
+                            <li>• Sử dụng màu sắc khác ngoài quy định</li>
+                            <li>• Đặt logo trên nền có độ tương phản thấp</li>
+                            <li>• Xoay hoặc nghiêng logo</li>
+                            <li>• Thêm hiệu ứng bóng đổ hoặc viền</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-4">9friday</h3>
+                <p class="text-blue-100">Fintech Company - Technology & Finance</p>
+            </div>
+            <div class="border-t border-blue-400 pt-8">
+                <p class="text-blue-100">&copy; 2024 9friday. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('text-blue-600');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
